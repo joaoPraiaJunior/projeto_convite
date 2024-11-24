@@ -1,0 +1,20 @@
+import { Righteous } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const fonte = Righteous( {
+    subsets: ['latin'],
+    weight: '400',
+})
+
+export default function Logo() {
+  return (
+    <Link href="/" className={`flex items-center${fonte.className}`}>
+        <Image src='/logo.svg' width={50} height={50} alt='logo'/>
+        <h1>
+            <span>CONVITE</span>
+            <span>DIGITAL</span>
+        </h1>
+    </Link>
+  );
+}
